@@ -1,0 +1,13 @@
+data allows for analysis of situations and the world
+
+some places data comes from:
+	life/the situation (observations - sensors, instruments, human observations)
+	aggregation of other data
+	data about the data / description of how data is categorized (meta data)
+
+
+
+JSON: java script object notation
+
+5 pitches related to data formats or data pitches.
+revise sprint to match pitch

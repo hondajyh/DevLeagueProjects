@@ -1,8 +1,6 @@
-### [Insert Title Here] For example: Chicken wing-spans in relation to their Jurassic Ancestors
+### [Sprint 1: Data Formats & Terminology]
 
-test this text
-;;;;;
-[Insert Date Here]:
+[11/16/17]:
 
 **Author:** [Author Name Here]
 
