@@ -22,14 +22,15 @@ Special specification for expressions evaluation:
     * If evaluator identifies variable as a expression, then it will pass the expression into the Evaluator function
 
 
-#  SEE ExprEval.py for solution.  
-# script file will create a database and populate with sample data, including expressions and data values for variables in the expression.
-# script will then run the evaluator code segment which does the following:
-# 1. get expression information, including expression and variables (held as serialized data)
-# for each variable, do the following:
-# 2. extract variable type information from the retrieved variable information
-# 3. if variable type is db_var then variable's value is held in a data table in the database. retrieve table name, field name, and unique field to query on.
-#     retrieve value by querying on information for a given unique field (we assume we know what the unique field is ahead of time)
-# 4. in the expression, replace varible with retrieved value  
-# 5. if variable type is expression, then recursively reenter expression evaluator.
-# after all variables have been processed, evaluate expression
+SEE ExprEval.py for solution.  Description of script:  
+* script file will create a database and populate with sample data, including expressions and data values for variables in the expression.
+* variables will be stored as serialized data using python pickling process
+* script will then run the evaluator code segment which does the following:
+  1. get expression information, including expression and variables (depickle.  it is held as serialized data)
+  2. for each variable, do the following:
+     a. extract variable type information from the retrieved variable information
+     b. if variable type is db_var then variable's value is held in a data table in the database. retrieve table name, field name, and unique field to query on.
+     c. retrieve value by querying on information for a given unique field (we assume we know what the unique field is ahead of time)
+     d. in the expression, replace varible with retrieved value  
+     e. if variable type is expression, then recursively reenter expression evaluator.
+  3. after all variables have been processed, evaluate expression
